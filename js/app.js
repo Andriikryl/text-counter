@@ -10,4 +10,7 @@ text.addEventListener("input", () => {
   }
 
   characters.textContent = text.value.length;
+
+  symbols.textContent =
+    text.value.split(/[!@#$%&*+=(){}:"'<>.,?/-]/).length - 1;
 });
