@@ -5,4 +5,9 @@ const symbols = document.querySelector(".js-symbols");
 
 text.addEventListener("input", () => {
   words.innerHTML = text.value.trim().split(/\s+/).length;
+  if (text.value.length === 0) {
+    words.innerHTML = "0";
+  }
+
+  characters.textContent = text.value.length;
 });
